@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+body {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+a:hover {
+  color: #107eff;
+}
+a:active {
+  color: #ffc810;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 3.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 2.5;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Marcellus", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+h5 {
+  line-height: 1.5;
+  letter-spacing: 2.4;
+}
+
+header,
+footer,
+section {
+  max-width: 1840px;
+  margin: 0 35px;
+  padding: 0 100px;
+  border-top: 1px solid #707070;
+}
+
+.container {
+  margin-left: 280px;
+}
+
+header {
+  margin-top: 20px;
+}
+header .top-header {
+  text-align: end;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: #ffc810;
+  padding: 25px 50px 30px 0;
+  margin: 0 -100px;
+  border-bottom: 1px solid #707070;
+  transition: all 0.5s ease-in-out;
+}
+header .top-header span {
+  color: #107eff;
+  font-weight: 400;
+}
+header .top-header:hover {
+  color: #107eff;
+}
+header .top-header:hover span {
+  color: #ffc810;
+}
+header .top-header:active {
+  padding-right: 60px;
+  color: #ffc810;
+}
+header .top-header:active span {
+  color: #107eff;
+}
+header .hero {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+header .hero .logo {
+  margin-bottom: 20px;
+}
+header .container__hero {
+  margin-top: 128px;
+  margin-bottom: 45px;
+}
+header .container__hero h2 {
+  font-size: 3.5rem;
+}
+header .container__hero .desc {
+  text-transform: uppercase;
+  font-style: "Marcellus", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+header .botom-hero {
+  display: flex;
+  justify-content: space-between;
+}
+header .botom-hero h2 {
+  font-size: 20px;
+}
+header ul {
+  display: flex;
+}
+header ul li:not(:last-child) {
+  margin-right: 80px;
+}
+
+#what-we-do li {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0 -100px;
+  padding: 0 100px;
+  padding-top: 80px;
+  height: 370px;
+}
+#what-we-do .num {
+  min-width: 280px;
+  font-size: 1.2rem;
+  font-family: "Merriweather", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  opacity: 0.5;
+}
+#what-we-do h3,
+#what-we-do h5 {
+  width: 50%;
+}
+
+#accordion {
+  height: auto;
+  padding: 0;
+}
+#accordion .accordion {
+  position: absolute;
+  border: 3px solid green;
+}
+#accordion ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+#accordion ul li {
+  padding-top: 135px;
+  max-width: 490px;
+  border: 1px solid red;
+  margin-right: 110px;
+  margin-left: 90;
+}
+#accordion .btn-accordion {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: none;
+  color: #a0a0a0;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+#accordion .btn-accordion:hover {
+  color: #107eff;
+}
+#accordion .btn-accordion:active {
+  color: #ffc810;
+}
+#accordion .btn-accordion .closed {
+  line-height: 0.75;
+  font-size: 3rem;
+  margin-right: 50px;
+}
+#accordion h5 {
+  padding-left: 85px;
+  margin-top: 40px;
+}
+
+#about-us {
+  margin-top: 390px;
+}/*# sourceMappingURL=main.css.map */
