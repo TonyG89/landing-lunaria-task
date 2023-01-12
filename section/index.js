@@ -19,11 +19,16 @@ const fillWhatWeDo = () => {
 const aboutUsCode = () => {
     headerSection("about-us")
     aboutUs.forEach(i => {
-        document.querySelector("#about-us").innerHTML += `
-            <div class="photo"><img src="../img/about-us/${i.photo}.png" alt="${i.name}"></div>
-            <div class="persona">
-                <h4 class="name">${i.name}</h4>
-                <h5 class="job">${i.job}</h5>
+        const url = `../img/about-us/${i.photo}.png`
+        document.querySelector(".photoes").innerHTML += `
+            <div class="card">
+                <div class="photo" style='background: url(${url}) no-repeat center'>
+                    <img class="photo" src="../img/gradient.png" alt="${i.name}">
+                </div>
+                <div class="persona">
+                    <h4 class="name">${i.name}</h4>
+                    <h5 class="job">${i.job}</h5>
+                </div>
             </div>
             `
     })
@@ -32,12 +37,14 @@ const aboutUsCode = () => {
 const projectsAsCode = () => {
     headerSection("projects")
     projects.forEach(i => {
-        document.querySelector("#projects").innerHTML += `
+        document.querySelector(".slide-zone").innerHTML += `
         <div class="slide">
-        <div class="photo"><img src="../img/projects/${i.photo}" alt="${i.title}"></div>
-        <h4 class="name">${i.title}</h4>
-        <h5 class="desc">${i.desc === "" && "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque delectus at, deleniti mollitia impedit laborum reprehenderit enim fugiat optio."}</h5>
-    </div>
+            <div class="photo">
+                <img src="../img/projects/${i.photo}.png" alt="${i.title}">
+            </div>
+            <h4 class="name">${i.title}</h4>
+            <h5 class="desc">${i.desc === "" ? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque delectus at, deleniti mollitia impedit laborum reprehenderit enim fugiat optio." : i.desc}</h5>
+        </div>
     `
     })
 }

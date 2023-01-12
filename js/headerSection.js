@@ -1,4 +1,4 @@
-import {titles} from '../const.js';
+import { titles } from '../const.js';
 
 export default function headerSection(id) {
     const section = document.querySelector("#" + id)
@@ -8,7 +8,10 @@ export default function headerSection(id) {
             html = `
             <div class="top-section">
             <h2>${i.title}</h2>
-            <h5>${i.desc}</h5>
+            <div class="text">
+                <h5>${i.desc}</h5>
+                ${id === "about-us" ? '<a href="#" class="more-about">More About Us<span><img src="../img/arrow.svg" alt="arrow" /></span></a>': ''}
+            </div>
             </div>
             `
         }

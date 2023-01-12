@@ -1,7 +1,12 @@
+@import url("./css/input-range.css");
+
 $fontNova: "Proxima Nova", sans-serif;
 $fontMarcel: "Marcellus", sans-serif;
 $fontMerri: "Merriweather", sans-serif;
+
 $fontSizeMain: 20px;
+
+$trans: all 0.5s ease-in-out;
 
 * {
   padding: 0;
@@ -24,7 +29,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: $trans;
   &:hover {
     color: #107eff;
   }
@@ -59,8 +64,23 @@ h4 {
 }
 
 h5 {
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: 2.4;
+}
+
+input {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding-bottom: 35px;
+  padding-top: 15px;
+  min-width: 550px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  &[value] {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
 }
 
 header,
@@ -90,7 +110,7 @@ header {
       color: #107eff;
       font-weight: 400;
     }
-    transition: all 0.5s ease-in-out;
+    transition: $trans;
     &:hover {
       color: #107eff;
       span {
@@ -169,18 +189,15 @@ header {
   padding: 0;
   .accordion {
     position: absolute;
-    border: 3px solid green;
   }
   ul {
     display: flex;
     justify-content: flex-start;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     li {
       padding-top: 135px;
-      max-width: 490px;
-      border: 1px solid red;
-      margin-right: 110px;
-      margin-left: 90;
+      width: 440px;
+      margin-left: 60px;
     }
   }
   .btn-accordion {
@@ -189,26 +206,173 @@ header {
     align-items: flex-start;
     background: none;
     color: #a0a0a0;
-    transition: all 0.5s ease-in-out;
+    transition: $trans;
     cursor: pointer;
     &:hover {
-      color: #107eff;
-    }
-    &:active {
-      color: #ffc810;
+      h4 {
+        color: #ffffff;
+      }
     }
     .closed {
       line-height: 0.75;
       font-size: 3rem;
       margin-right: 50px;
+      color: #a0a0a0;
     }
+  }
+  h4 {
+    color: #a0a0a0;
+    transition: $trans;
   }
   h5 {
     padding-left: 85px;
     margin-top: 40px;
+    max-height: 0;
+    overflow: hidden;
   }
 }
 
 #about-us {
-  margin-top: 390px;
+  padding-top: 130px;
+  margin-top: 360px;
+  margin-bottom: 130px;
+  .photoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 125px;
+  }
+  .card {
+    position: relative;
+    .photo {
+      height: 560px;
+      img {
+        object-fit: none;
+        object-position: 50% 100%; // or 50% 50%
+      }
+    }
+    .persona {
+      position: absolute;
+      left: 40px;
+      bottom: 50px;
+    }
+    h4 {
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+    h5 {
+      letter-spacing: normal;
+      font-size: 1rem;
+    }
+  }
 }
+
+#projects {
+  padding-top: 150px;
+  .top-section {
+    margin-bottom: 140px;
+  }
+  .slider {
+    // overflow-x: hidden;
+    .slide-zone {
+      display: flex;
+      margin-left: -1190px;
+    }
+    .slide {
+      margin-right: 125px;
+    }
+    h4,
+    h5 {
+      padding-left: 50px;
+    }
+    h4 {
+      font-family: $fontNova;
+      font-size: 1.5rem;
+      margin-top: 40px;
+      font-weight: 700;
+    }
+    h5 {
+      font-family: $fontMarcel;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #7e7e7e;
+      letter-spacing: 0;
+      width: 73%;
+    }
+  }
+}
+
+#tell-us {
+  padding-top: 170px;
+  .top-section {
+    margin-bottom: 110px;
+  }
+  .bottom-section {
+    margin-left: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    :nth-child(n) {
+      width: 50%;
+      margin-bottom: 100px;
+    }
+    :nth-child(4) {
+      align-self: flex-start;
+    }
+    h3,
+    .title {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      width: 100%;
+      padding-bottom: 50px;
+    }
+    .tell-us {
+      margin: 0 0 10px;
+      width: 100%;
+      letter-spacing: 0;
+      color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+    }
+  }
+}
+
+#contact {
+  padding-top: 160px;
+  .top-section {
+    margin-bottom: 130px;
+  }
+}
+
+.top-section {
+  display: flex;
+  margin-left: 280px;
+  flex-wrap: wrap;
+  h2,
+  .text {
+    width: 50%;
+  }
+  h5 {
+    letter-spacing: 2;
+  }
+  .more-about {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    transition: $trans;
+    cursor: pointer;
+    span {
+      padding-left: 20px;
+    }
+  }
+}
+
+.range {
+  margin: 0;
+  padding: 0;
+}
+
+
+

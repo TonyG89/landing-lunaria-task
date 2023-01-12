@@ -1,3 +1,4 @@
+@import url("./css/input-range.css");
 * {
   padding: 0;
   margin: 0;
@@ -54,8 +55,23 @@ h4 {
 }
 
 h5 {
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: 2.4;
+}
+
+input {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding-bottom: 35px;
+  padding-top: 15px;
+  min-width: 550px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+input[value] {
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 header,
@@ -162,7 +178,6 @@ header ul li:not(:last-child) {
 }
 #accordion .accordion {
   position: absolute;
-  border: 3px solid green;
 }
 #accordion ul {
   display: flex;
@@ -171,10 +186,8 @@ header ul li:not(:last-child) {
 }
 #accordion ul li {
   padding-top: 135px;
-  max-width: 490px;
-  border: 1px solid red;
-  margin-right: 110px;
-  margin-left: 90;
+  width: 440px;
+  margin-left: 60px;
 }
 #accordion .btn-accordion {
   display: flex;
@@ -185,22 +198,165 @@ header ul li:not(:last-child) {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-#accordion .btn-accordion:hover {
-  color: #107eff;
-}
-#accordion .btn-accordion:active {
-  color: #ffc810;
+#accordion .btn-accordion:hover h4 {
+  color: #ffffff;
 }
 #accordion .btn-accordion .closed {
   line-height: 0.75;
   font-size: 3rem;
   margin-right: 50px;
+  color: #a0a0a0;
+}
+#accordion h4 {
+  color: #a0a0a0;
+  transition: all 0.5s ease-in-out;
 }
 #accordion h5 {
   padding-left: 85px;
   margin-top: 40px;
+  max-height: 0;
+  overflow: hidden;
 }
 
 #about-us {
-  margin-top: 390px;
+  padding-top: 130px;
+  margin-top: 360px;
+  margin-bottom: 130px;
+}
+#about-us .photoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 125px;
+}
+#about-us .card {
+  position: relative;
+}
+#about-us .card .photo {
+  height: 560px;
+}
+#about-us .card .photo img {
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+#about-us .card .persona {
+  position: absolute;
+  left: 40px;
+  bottom: 50px;
+}
+#about-us .card h4 {
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+#about-us .card h5 {
+  letter-spacing: normal;
+  font-size: 1rem;
+}
+
+#projects {
+  padding-top: 150px;
+}
+#projects .top-section {
+  margin-bottom: 140px;
+}
+#projects .slider .slide-zone {
+  display: flex;
+  margin-left: -1190px;
+}
+#projects .slider .slide {
+  margin-right: 125px;
+}
+#projects .slider h4,
+#projects .slider h5 {
+  padding-left: 50px;
+}
+#projects .slider h4 {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  font-weight: 700;
+}
+#projects .slider h5 {
+  font-family: "Marcellus", sans-serif;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #7e7e7e;
+  letter-spacing: 0;
+  width: 73%;
+}
+
+#tell-us {
+  padding-top: 170px;
+}
+#tell-us .top-section {
+  margin-bottom: 110px;
+}
+#tell-us .bottom-section {
+  margin-left: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+#tell-us .bottom-section :nth-child(n) {
+  width: 50%;
+  margin-bottom: 100px;
+}
+#tell-us .bottom-section :nth-child(4) {
+  align-self: flex-start;
+}
+#tell-us .bottom-section h3,
+#tell-us .bottom-section .title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  padding-bottom: 50px;
+}
+#tell-us .bottom-section .tell-us {
+  margin: 0 0 10px;
+  width: 100%;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+
+#contact {
+  padding-top: 160px;
+}
+#contact .top-section {
+  margin-bottom: 130px;
+}
+
+.top-section {
+  display: flex;
+  margin-left: 280px;
+  flex-wrap: wrap;
+}
+.top-section h2,
+.top-section .text {
+  width: 50%;
+}
+.top-section h5 {
+  letter-spacing: 2;
+}
+.top-section .more-about {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.top-section .more-about span {
+  padding-left: 20px;
+}
+
+.range {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=main.css.map */

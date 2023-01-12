@@ -1,0 +1,165 @@
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+
+input[type=range] {
+    height: 2.2em;
+    -webkit-appearance: none;
+  }
+  
+  /*progress support*/
+  input[type=range] {
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--value) - var(--min)) / var(--range));
+    --sx: calc(0.5 * 20px + var(--ratio) * (100% - 20px));
+  }
+  
+  input[type=range]:focus {
+    outline: none;
+  }
+  
+  /*webkit*/
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50em;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 0 2px black;
+    margin-top: calc(5px * 0.5 - 20px * 0.5);
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    border: none;
+    border-radius: 1px;
+    background: #f5f5f5;
+    box-shadow: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb:hover {
+    background: linear-gradient(to right, #107eff, #ffc810);
+  }
+  
+  input[type=range]:hover::-webkit-slider-runnable-track {
+    background: #ffc810;
+  }
+  
+  input[type=range]:active::-webkit-slider-runnable-track {
+    background: #107eff;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #f5f5f5;
+  }
+  
+  input[type=range]:hover::-webkit-slider-runnable-track {
+    background: linear-gradient(#107eff,#107eff) 0/var(--sx) 100% no-repeat, #ffc810;
+  }
+  
+  input[type=range]:active::-webkit-slider-runnable-track {
+    background: linear-gradient(#ffc810,#ffc810) 0/var(--sx) 100% no-repeat, #107eff;
+  }
+  
+  /*mozilla*/
+  input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50em;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 0 2px black;
+  }
+  
+  input[type=range]::-moz-range-track {
+    height: 5px;
+    border: none;
+    border-radius: 1px;
+    background: #f5f5f5;
+    box-shadow: none;
+  }
+  
+  input[type=range]::-moz-range-thumb:hover {
+    background: linear-gradient(to right, #107eff, #ffc810);
+  }
+  
+  input[type=range]:hover::-moz-range-track {
+    background: #ffc810;
+  }
+  
+  input[type=range]:active::-moz-range-track {
+    background: #107eff;
+  }
+  
+  input[type=range]::-moz-range-track {
+    background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #f5f5f5;
+  }
+  
+  input[type=range]:hover::-moz-range-track {
+    background: linear-gradient(#107eff,#107eff) 0/var(--sx) 100% no-repeat, #ffc810;
+  }
+  
+  input[type=range]:active::-moz-range-track {
+    background: linear-gradient(#ffc810,#ffc810) 0/var(--sx) 100% no-repeat, #107eff;
+  }
+  
+  /*ms*/
+  input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border-color: transparent;
+  }
+  
+  input[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50em;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 0 2px black;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+  
+  input[type=range]::-ms-track {
+    height: 5px;
+    border-radius: 1px;
+    background: #f5f5f5;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  
+  input[type=range]::-ms-thumb:hover {
+    background: linear-gradient(to right, #107eff, #ffc810);
+  }
+  
+  input[type=range]:hover::-ms-track {
+    background: #ffc810;
+  }
+  
+  input[type=range]:active::-ms-track {
+    background: #107eff;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    height: 5px;
+    border-radius: 1px 0 0 1px;
+    margin: -undefined 0 -undefined -undefined;
+    background: #FFFFFF;
+    border: none;
+    border-right-width: 0;
+  }
+  
+  input[type=range]:hover::-ms-fill-lower {
+    background: #107eff;
+  }
+  
+  input[type=range]:active::-ms-fill-lower {
+    background: #ffc810;
+  }
+  

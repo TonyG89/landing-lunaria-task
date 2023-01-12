@@ -1,7 +1,7 @@
 # design-masha
 
-- structure+content - 6h
-- styles -
+- structure+content - 6h (1day)
+- styles - 8h (2day...)
 - backgrounds -
 - functions -
 - animation -
