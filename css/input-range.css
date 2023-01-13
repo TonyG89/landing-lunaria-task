@@ -2,7 +2,7 @@
 https://toughengineer.github.io/demo/slider-styler*/
 
 input[type=range] {
-    height: 2.2em;
+    height: 0;
     -webkit-appearance: none;
   }
   
@@ -147,7 +147,7 @@ input[type=range] {
   }
   
   input[type=range]::-ms-fill-lower {
-    height: 5px;
+    height: 15px;
     border-radius: 1px 0 0 1px;
     margin: -undefined 0 -undefined -undefined;
     background: #FFFFFF;

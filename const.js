@@ -62,4 +62,4 @@ export const projects = [
     }
 ]
 
-export const socLink = ["yotuube", "insta", "twitter", "fb", "linkidin"]
+export const socLink = ["youtube", "insta", "twitter", "fb", "linkidin"]

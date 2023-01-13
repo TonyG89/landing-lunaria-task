@@ -1,6 +1,7 @@
 import fetch from '../js/fetchHtml.js';
 import { whatWeDo, aboutUs, projects, socLink } from '../const.js';
 import headerSection from '../js/headerSection.js';
+import Slider from '../js/slider.js';
 
 const fillWhatWeDo = () => {
     const stylePadding = (num) => `style='padding-right: ${num}'`
@@ -50,16 +51,19 @@ const projectsAsCode = () => {
 }
 
 const tellUsAsCode = () => headerSection("tell-us")
-const contactAsCode = () => headerSection("contact")
-
+const contactAsCode = () => {
+    headerSection("contact")
+    socLink.forEach(i => {
+        document.querySelector(".icon").innerHTML += `
+        <img src="../img/icons/${i}.svg" alt="${i}">
+        `
+    })
+}
 
 export default function render() {
-    fetch("header")
     fetch("what-we-do", "#what-we-do", fillWhatWeDo)
-    fetch("accordion", "#accordion")
     fetch("about-us", "#about-us", aboutUsCode)
     fetch("projects", "#projects", projectsAsCode)
     fetch("tell-us", "#tell-us", tellUsAsCode)
     fetch("contact", "#contact", contactAsCode)
-    fetch("footer")
 }
