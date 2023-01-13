@@ -15,30 +15,36 @@
         <wrapper>
             <header>
                 <div class="top-header">Stand <span>with Ukraine</span></div>
-<div class="hero">
-    <div>
-        <div class="logo"><img src="../img/lunaria.png" alt="logo"></div>
-        <div><img src="../img/web-ui-dev.png" alt="web-ui-dev"></div>
-    </div>
-    <div class="container container__hero">
-        <h2>Lunaria is the leading IT
-            integrator for taking your
-            business to the next level</h2>
-        <p class="desc">Drive profit with omnichannel IT transformation</p>
-        <div class="botom-hero">
-            <h2 class="menu">What we DO:</h2>
-            <nav>
-                <ul>
-                    <li><a href="#portfolio">portfolio</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
+                <div class="hero">
+                    <div>
+                        <div class="logo"><img src="../img/lunaria.png"
+                                alt="logo"></div>
+                        <div><img src="../img/web-ui-dev.png" alt="web-ui-dev"></div>
+                    </div>
+                    <div class="container container__hero">
+                        <h2>Lunaria is the leading IT
+                            integrator for taking your
+                            business to the next level</h2>
+                        <p class="desc">Drive profit with omnichannel IT
+                            transformation</p>
+                        <div class="botom-hero">
+                            <h2 class="menu">What we DO:</h2>
+                            <nav>
+                                <ul>
+                                    <li><a href="#portfolio">portfolio</a></li>
+                                    <li><a href="#contact-us">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
 
             </header>
-            <!-- <section id="what-we-do"></section> -->
+            <section id="what-we-do">
+                <ul class="table">
+                </ul>
+            </section>
+            
             <section id="accordion">
                 <ul class="accordion">
                     <li>
@@ -46,7 +52,8 @@
                             <div class="closed">+</div>
                             <h4>Quality</h4>
                         </button>
-                        <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe,
+                        <h5>Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Saepe,
                             cupiditate!</h5>
                     </li>
                     <li>
@@ -54,8 +61,10 @@
                             <div class="closed">+</div>
                             <h4>Guaranty</h4>
                         </button>
-                        <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-                            accusantium vitae molestiae deleniti consectetur obcaecati porro
+                        <h5>Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Quidem
+                            accusantium vitae molestiae deleniti consectetur
+                            obcaecati porro
                             delectus recusandae architecto ipsa.</h5>
                     </li>
                     <li>
@@ -63,8 +72,10 @@
                             <div class="closed">+</div>
                             <h4>transparency of cooperation</h4>
                         </button>
-                        <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Consectetur, ab maiores! Ullam eligendi at exercitationem.</h5>
+                        <h5>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                            Consectetur, ab maiores! Ullam eligendi at
+                            exercitationem.</h5>
                     </li>
                     <li>
                         <button class="btn-accordion">
@@ -75,10 +86,65 @@
                     </li>
                 </ul>
             </section>
-            <!-- <section id="about-us"></section> -->
-            <!-- <section id="projects"></section> -->
-            <!-- <section id="tell-us"></section> -->
-            <!-- <section id="contact"></section> -->
+            
+            <section id="about-us">
+                <div class="photoes">
+                </div>
+            </section>
+            
+            <section id="projects">
+                <div class="slider">
+                    <div class="slide-zone">
+                    </div>
+                </div>
+            </section>
+            
+            <section id="tell-us">
+                <div class="bottom-section">
+                    <div class="input">
+                        <input type="text" placeholder="Your Name">
+                    </div>
+                    <div class="input">
+                        <h5 class="tell-us">Your Contact / Email or Phone with Messengers</h5>
+                        <input type="tel" value="+35 088 528 63 59">
+                    </div>
+                    <form class="budget" oninput="level.value= flevel.valueAsNumber">
+                        <h3 class="title">Your budget of project:</h3>
+                        <div class="budget-scroll">
+                            <input class="range" type="range" name="flevel" id="budget-slider"
+                                value="10000" min="500" max="25000" step="50">
+                            <div class="price">
+                                <span>$</span>
+                                <output for="budget-slider" name="level">More than $25000</output>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="input">
+                        <input type="text" placeholder="Add text or Comment About project">
+                    </div>
+                    <button class="btn-send">Send</button>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <div class="contacts">
+                    <div class="main">
+                        <h5 class="mail">Lunaria@gmail.com</h4>
+                        <h5 class="tel">+32 087 3467 911</h4>
+                    </div>
+                    <div class="other">
+                        <div class="address">
+                            <div class="img"></div>
+                            <h4 class="address-text">2650 Thousand <br> Oaks Blvd, Memphis,<br> TN 38118</h4>
+                        </div>
+                        <div class="soc">
+                            <h4 class="text">Our social network:</h4>
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <footer>
                 <div class="copy">
                     <h1 class="logo">LUNARIA</h1>

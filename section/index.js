@@ -3,9 +3,8 @@ import { whatWeDo, aboutUs, projects, socLink } from '../const.js';
 import headerSection from '../js/headerSection.js';
 import Slider from '../js/slider.js';
 
-const fillWhatWeDo = () => {
+const blockWhatWeDo = () => {
     const stylePadding = (num) => `style='padding-right: ${num}'`
-    const stylePad = "style='padding-right: 10px'"
     whatWeDo.forEach(({ title, desc }, index) => {
         document.querySelector(".table").innerHTML += `
             <li>
@@ -17,7 +16,7 @@ const fillWhatWeDo = () => {
     })
 }
 
-const aboutUsCode = () => {
+const blockAboutUs = () => {
     headerSection("about-us")
     aboutUs.forEach(i => {
         const url = `../img/about-us/${i.photo}.png`
@@ -35,7 +34,7 @@ const aboutUsCode = () => {
     })
 }
 
-const projectsAsCode = () => {
+const blockProjects = () => {
     headerSection("projects")
     projects.forEach(i => {
         document.querySelector(".slide-zone").innerHTML += `
@@ -50,7 +49,8 @@ const projectsAsCode = () => {
     })
 }
 
-const tellUsAsCode = () => headerSection("tell-us")
+// const tellUsAsCode = () => headerSection("tell-us")
+
 const contactAsCode = () => {
     headerSection("contact")
     socLink.forEach(i => {
@@ -61,9 +61,9 @@ const contactAsCode = () => {
 }
 
 export default function render() {
-    fetch("what-we-do", "#what-we-do", fillWhatWeDo)
-    fetch("about-us", "#about-us", aboutUsCode)
-    fetch("projects", "#projects", projectsAsCode)
-    fetch("tell-us", "#tell-us", tellUsAsCode)
-    fetch("contact", "#contact", contactAsCode)
+    blockWhatWeDo()
+    blockAboutUs()
+    blockProjects()
+    headerSection("tell-us")
+    contactAsCode()
 }
