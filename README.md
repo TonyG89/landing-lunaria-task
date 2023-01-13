@@ -1,15 +1,17 @@
 # design-masha
 
+days 4
 - structure+content - 6h (1day)
 - styles - 10h (2day...)
-- backgrounds -
-- functions -
-- animation -
-- adaptive -
+- backgrounds - 
+- functions - (accord - 3h + slider - 3h) + 
+- animation - 
+- adaptive - 
 
 сложности:
 не нашел шрифт Misto в тексте 'Stand with Ukraine' та и шрифты не подходят вроде как под ваши.
 не понял концепцию слайдера, сделал блоки слайдов одинаковыми.
+в блоке слайдер две стрелки на макете, я не понял для чего вторая=/
 долгое время убил на дизайн ползунка часа 2-3.
 ## all:
 

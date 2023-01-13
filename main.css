@@ -175,11 +175,19 @@ header ul li:not(:last-child) {
 }
 
 #accordion {
-  height: auto;
+  position: relative;
+  height: 360px;
   padding: 0;
+  transition: all 0.5s ease-in-out;
 }
 #accordion .accordion {
   position: absolute;
+  transition: all 0.5s ease-in-out;
+  left: 0;
+}
+#accordion .accordion .left {
+  left: -200px;
+  transition: all 0.5s ease-in-out;
 }
 #accordion ul {
   display: flex;
@@ -216,13 +224,17 @@ header ul li:not(:last-child) {
 #accordion h5 {
   padding-left: 85px;
   margin-top: 40px;
-  max-height: 0;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0, 0, 1, -0.32);
+}
+#accordion .hide {
   overflow: hidden;
+  max-height: 0;
+  opacity: 0;
 }
 
 #about-us {
   padding-top: 130px;
-  margin-top: 360px;
   margin-bottom: 130px;
 }
 #about-us .photoes {
@@ -259,13 +271,19 @@ header ul li:not(:last-child) {
 
 #projects {
   padding-top: 150px;
+  transition: all 0.5s ease-in-out;
 }
 #projects .top-section {
   margin-bottom: 140px;
 }
+#projects .slider {
+  position: relative;
+  overflow-x: hidden;
+}
 #projects .slider .slide-zone {
   display: flex;
-  margin-left: -1190px;
+  margin-left: -1212px;
+  transition: all 0.5s ease-in-out;
 }
 #projects .slider .slide {
   margin-right: 125px;
@@ -287,6 +305,41 @@ header ul li:not(:last-child) {
   color: #7e7e7e;
   letter-spacing: 0;
   width: 73%;
+}
+#projects .arrows {
+  position: absolute;
+  z-index: 10;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#projects .arrows .left {
+  transform: rotate(180deg);
+}
+#projects .arrows .left,
+#projects .arrows .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 50px;
+  background: none;
+  border: none;
+}
+#projects .arrows .left:hover,
+#projects .arrows .right:hover {
+  background-color: rgba(115, 180, 255, 0.1882352941);
+  filter: blur(1px);
+  border-radius: 5px;
+}
+#projects .arrows .left:active,
+#projects .arrows .right:active {
+  background-color: rgba(255, 200, 16, 0.1882352941);
+}
+#projects .arrows .none {
+  visibility: hidden;
 }
 
 #tell-us {
@@ -425,7 +478,8 @@ footer .copy {
   display: flex;
   text-transform: uppercase;
 }
-footer .logo, footer .copyright {
+footer .logo,
+footer .copyright {
   margin-right: 15px;
   font-size: 1.2rem;
 }
@@ -467,4 +521,16 @@ footer ul li {
 .range {
   margin: 0;
   padding: 0;
+}
+
+@-webkit-keyframes left {
+  0% {
+    left: 0;
+  }
+}
+
+@keyframes left {
+  0% {
+    left: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
