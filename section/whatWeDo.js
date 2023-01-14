@@ -1,5 +1,8 @@
 import { whatWeDo } from '../const.js';
 
+const htmlCode = `<button class="go-top"><img src="./img/arrow.svg" alt="go-top"><div>UP</div></button>`
+
+
 export const blockWhatWeDo = () => {
     const stylePadding = (num) => `style='padding-right: ${num}'`
     whatWeDo.forEach(({ title, desc }, index) => {
@@ -11,4 +14,7 @@ export const blockWhatWeDo = () => {
             </li>
             `
     })
+
+const a = document.querySelector(".table")
+    console.log(a);
 }

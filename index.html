@@ -13,6 +13,7 @@
     </head>
     <body>
         <wrapper>
+            <section id="fix-menu"></section>
             <header>
                 <div class="top-header">Stand <span>with Ukraine</span></div>
                 <div class="hero">
@@ -31,8 +32,8 @@
                             <h2 class="menu">What we DO:</h2>
                             <nav>
                                 <ul>
-                                    <li><a href="#portfolio">portfolio</a></li>
-                                    <li><a href="#contact-us">Contact Us</a></li>
+                                    <li><a href="#projects">portfolio</a></li>
+                                    <li><a href="#contact">Contact Us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -40,6 +41,8 @@
                 </div>
 
             </header>
+
+
 
             <section id="what-we-do">
                 <ul class="table">
@@ -100,8 +103,10 @@
                 <div class="slider">
                     <div class="slide-zone"></div>
                     <div class="arrows">
-                        <button class="left" ><img src="./img/arrow.svg" alt="arrow-left"></button>
-                        <button class="right" ><img src="./img/arrow.svg" alt="arrow-right"></button>
+                        <button class="left"><img src="./img/arrow.svg"
+                                alt="arrow-left"></button>
+                        <button class="right"><img src="./img/arrow.svg"
+                                alt="arrow-right"></button>
                     </div>
                 </div>
             </section>
@@ -114,7 +119,8 @@
                     <div class="input">
                         <h5 class="tell-us">Your Contact / Email or Phone with
                             Messengers</h5>
-                        <input type="tel" value="+35 088 528 63 59">
+                        <input type="tel" value="+35 088 528 63 59"
+                            maxlength="20">
                     </div>
                     <form class="budget" oninput="level.value=
                         flevel.valueAsNumber">

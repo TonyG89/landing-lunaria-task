@@ -48,7 +48,6 @@ const slideLeft = (e) => {
 
 
     position--
-    console.log(position);
 }
 
 const slideRight = () => {
@@ -64,7 +63,6 @@ const slideRight = () => {
             break;
     }
     position++
-    console.log(position);
 }
 
 prevBtn.addEventListener("click", () => slideLeft())
