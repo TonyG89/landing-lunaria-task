@@ -1,4 +1,4 @@
-import { whatWeDo } from '../const.js';
+import { whatWeDo } from '../../const.js';
 
 const htmlCode = `<button class="go-top"><img src="./img/arrow.svg" alt="go-top"><div>UP</div></button>`
 
@@ -15,6 +15,6 @@ export const blockWhatWeDo = () => {
             `
     })
 
-const a = document.querySelector(".table")
+    const a = document.querySelector(".table")
     console.log(a);
 }

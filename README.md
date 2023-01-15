@@ -1,10 +1,10 @@
 # design-masha
 
-days 4
+days 5
 - structure+content - 6h (1day)
 - styles - 10h (2day...)
 - backgrounds - 
-- functions - (accord - 3h + slider - 3h) + 
+- functions - (accord - 3h + slider - 3h) + (menu+go top - 3h)
 - animation - 
 - adaptive - 
 

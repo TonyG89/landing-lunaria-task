@@ -16,9 +16,17 @@
 
 body {
   background-color: #000000;
+}
+
+wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  background: url("./img/bg/blue.png") no-repeat, url("./img/bg/dark.png") no-repeat, url("./img/bg/yellow.png") no-repeat, url("./img/bg/red.png") no-repeat;
+  background-position: 1020px -1080px, 1185px 240px, 1310px -890px, -1050px 1326px;
 }
 
 a {
@@ -82,6 +90,13 @@ input {
 input[value] {
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.tel[placeholder] {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 1;
 }
 
 header,
@@ -165,12 +180,17 @@ header ul li:not(:last-child) {
 
 #fix-menu {
   position: fixed;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  max-width: 100%;
+  padding-left: 100px;
   background-color: #000000;
-  border-bottom: 1px solid #242424;
   z-index: 1;
+}
+#fix-menu .container {
+  padding: 0;
+  margin: 0;
+  background: url("./img/bg/blue.png") no-repeat, url("./img/bg/yellow.png") no-repeat;
+  background-position: 164px -1115px, 414px -1008px;
+  border-bottom: 1px solid #242424;
 }
 #fix-menu .top-header {
   border: none;
@@ -180,7 +200,6 @@ header ul li:not(:last-child) {
   justify-content: space-between;
   align-items: center;
   height: 105px;
-  padding-right: 100px;
 }
 #fix-menu .menu .logo-block {
   display: flex;
@@ -219,10 +238,11 @@ header ul li:not(:last-child) {
 }
 
 #accordion {
-  position: relative;
   height: 360px;
-  padding: 0;
+  width: 800px;
   transition: all 0.5s ease-in-out;
+  position: relative;
+  display: block;
 }
 #accordion .accordion {
   position: absolute;
@@ -240,7 +260,7 @@ header ul li:not(:last-child) {
 }
 #accordion ul li {
   padding-top: 135px;
-  width: 440px;
+  width: 450px;
   margin-left: 60px;
 }
 #accordion .btn-accordion {
@@ -264,16 +284,11 @@ header ul li:not(:last-child) {
   color: #a0a0a0;
   transition: all 0.5s ease-in-out;
 }
-#accordion h5 {
-  padding-left: 85px;
+#accordion .hide-block {
+  padding-left: 75px;
   margin-top: 40px;
-  opacity: 1;
-  transition: all 0.5s cubic-bezier(0, 0, 1, -0.32);
-}
-#accordion .hide {
-  overflow: hidden;
-  max-height: 0;
   opacity: 0;
+  transition: all 0.4s cubic-bezier(0, 0, 1, -0.32);
 }
 
 #about-us {
@@ -517,6 +532,7 @@ header ul li:not(:last-child) {
 footer {
   border: none;
   margin-bottom: 80px;
+  align-self: flex-start;
 }
 footer .copy {
   display: flex;
@@ -548,18 +564,34 @@ footer ul li {
   letter-spacing: 2;
 }
 .top-section .more-about {
+  font-size: 1rem;
+  font-weight: 700;
   margin-top: 30px;
+  text-transform: uppercase;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-out;
   cursor: pointer;
 }
 .top-section .more-about span {
   padding-left: 20px;
+}
+.top-section .hidden {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
+.top-section .visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 .go-top {
@@ -571,6 +603,7 @@ footer ul li {
   padding: 10px 30px;
   border-radius: 10%;
   font-weight: 700;
+  border: none;
 }
 .go-top:hover {
   background-color: rgba(16, 126, 255, 0.4392156863);

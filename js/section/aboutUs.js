@@ -1,5 +1,5 @@
-import headerSection from '../js/headerSection.js';
-import { aboutUs } from '../const.js';
+import headerSection from '../components/headerSection.js';
+import { aboutUs } from '../../const.js';
 
 export const blockAboutUs = () => {
     headerSection("about-us")

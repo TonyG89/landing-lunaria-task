@@ -1,5 +1,5 @@
-import headerSection from '../js/headerSection.js';
-import { projects } from '../const.js';
+import headerSection from '../components/headerSection.js';
+import { projects } from '../../const.js';
 
 export const blockProjects = () => {
     headerSection("projects")

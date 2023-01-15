@@ -1,9 +1,9 @@
 
 export default function goTop() {
+    
+    const htmlCode = `<button class="go-top hide"><img src="./img/arrow.svg" alt="go-top"><div>UP</div></button>`
 
-    const htmlCode = `<button class="go-top"><img src="./img/arrow.svg" alt="go-top"><div>UP</div></button>`
-
-    document.querySelector('body').insertAdjacentHTML("beforeend", htmlCode)
+    document.querySelector('body').insertAdjacentHTML("beforeend", htmlCode)    
 
     const btnGoTop = document.querySelector(".go-top")
 

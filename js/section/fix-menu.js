@@ -3,7 +3,9 @@ export const fixMenu = () => {
     const section = document.querySelector('header')
     const fixMenu = document.querySelector('#fix-menu')
 
+    console.log(fixMenu.offsetWidth);
     const htmlBlock = `
+    <div class="container">
         <div class="menu" style="width: ${section.offsetWidth}px">
             <div class="logo-block" onclick="window.scrollTo(0, 0)">
                 <div class="logo"><img src="../img/lunaria.png"
@@ -18,13 +20,11 @@ export const fixMenu = () => {
                 </ul>
             </nav>
         </div>
+    </div>
     `
-    document.querySelector('#fix-menu').innerHTML = htmlBlock
-
-    console.log(document.body.scrollTop);
-
 
     document.addEventListener("scroll", function () {
+        fixMenu.innerHTML = htmlBlock
         fixMenu.classList[window.pageYOffset < 800 ? "add" : "remove"]("hide")
     })
 }

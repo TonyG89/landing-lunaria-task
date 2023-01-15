@@ -26,9 +26,20 @@ $trans: all 0.5s ease-in-out;
 
 body {
   background-color: #000000;
+}
+
+wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  background: url("./img/bg/blue.png") no-repeat,
+    url("./img/bg/dark.png") no-repeat, url("./img/bg/yellow.png") no-repeat,
+    url("./img/bg/red.png") no-repeat;
+  background-position: 1020px -1080px, 1185px 240px, 1310px -890px,
+    -1050px 1326px;
 }
 
 a {
@@ -93,6 +104,12 @@ input {
     font-size: 1.5rem;
   }
 }
+.tel[placeholder] {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 1;
+}
 
 header,
 footer,
@@ -101,6 +118,9 @@ section {
   margin: 0 35px;
   padding: 0 100px;
   border-top: 1px solid #707070;
+}
+
+header {
 }
 
 .container {
@@ -175,10 +195,17 @@ header {
 
 #fix-menu {
   position: fixed;
-  width: max-content;
+  max-width: 100%;
+  padding-left: 100px;
   background-color: #000000;
-  border-bottom: 1px solid #242424;
   z-index: 1;
+  .container {
+    padding: 0;
+    margin: 0;
+    background: url("./img/bg/blue.png") no-repeat, url("./img/bg/yellow.png") no-repeat;
+    background-position: 164px -1115px, 414px -1008px;
+    border-bottom: 1px solid #242424;
+  }
   .top-header {
     border: none;
   }
@@ -187,7 +214,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 105px;
-    padding-right: 100px;
     .logo-block {
       display: flex;
       align-items: center;
@@ -230,10 +256,11 @@ header {
 }
 
 #accordion {
-  position: relative;
   height: 360px;
-  padding: 0;
+  width: 800px;
   transition: $trans;
+  position: relative;
+  display: block;
   .accordion {
     position: absolute;
     transition: $trans;
@@ -249,7 +276,7 @@ header {
     flex-wrap: nowrap;
     li {
       padding-top: 135px;
-      width: 440px;
+      width: 450px;
       margin-left: 60px;
     }
   }
@@ -276,16 +303,11 @@ header {
     color: #a0a0a0;
     transition: $trans;
   }
-  h5 {
-    padding-left: 85px;
+  .hide-block {
+    padding-left: 75px;
     margin-top: 40px;
-    opacity: 1;
-    transition: all 0.5s cubic-bezier(0, 0, 1, -0.32);
-  }
-  .hide {
-    overflow: hidden;
-    max-height: 0;
     opacity: 0;
+    transition: all 0.4s cubic-bezier(0, 0, 1, -0.32);
   }
 }
 
@@ -525,6 +547,7 @@ header {
 footer {
   border: none;
   margin-bottom: 80px;
+  align-self: flex-start;
   .copy {
     display: flex;
     text-transform: uppercase;
@@ -547,6 +570,7 @@ footer {
   display: flex;
   margin-left: 280px;
   flex-wrap: wrap;
+
   h2,
   .text {
     width: 50%;
@@ -555,16 +579,30 @@ footer {
     letter-spacing: 2;
   }
   .more-about {
+    font-size: 1rem;
+    font-weight: 700;
     margin-top: 30px;
+    text-transform: uppercase;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: fit-content;
-    transition: $trans;
+    transition: all 1s ease-out;
     cursor: pointer;
     span {
       padding-left: 20px;
     }
+  }
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+    transition: $trans;
+    max-height: fit-content;
   }
 }
 
@@ -577,6 +615,7 @@ footer {
   padding: 10px 30px;
   border-radius: 10%;
   font-weight: 700;
+  border: none;
   &:hover {
     background-color: #107eff70;
   }
