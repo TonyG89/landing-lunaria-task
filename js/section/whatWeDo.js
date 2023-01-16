@@ -9,8 +9,10 @@ export const blockWhatWeDo = () => {
         document.querySelector(".table").innerHTML += `
             <li>
                 <div class="num">0${index + 1}</div>
-                <h3 ${index === 1 && stylePadding(130)}>${title}</h3>
+                <div class="text-block">
+                <h3>${title}</h3>
                 <h5 ${index === 2 && stylePadding(10)}>${desc}</h5>
+                </div>
             </li>
             `
     })

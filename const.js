@@ -4,7 +4,7 @@ export const whatWeDo = [
         desc: "Development of a detailed roadmap to create or enhance your brand or digital product experience"
     },
     {
-        title: "Development and integration",
+        title: "Development \<br>\ and integration",
         desc: "Development, support, and scaling of high-traffic and high-load IT projects. Development of core website functionality, data storage and processing systems, data platforms, and buses. Back-end-developmentBack-end-development."
     },
     {

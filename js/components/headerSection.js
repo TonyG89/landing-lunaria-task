@@ -27,6 +27,7 @@ export default function headerSection(id) {
             hiddenBlock.classList.add("visible")
             btn.classList.add("hidden")
     })
+    document.querySelector("#"+id).style.width=document.querySelector("header").offsetWidth
 }
 
 
