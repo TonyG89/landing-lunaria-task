@@ -1,4 +1,3 @@
-@import url("./css/input-range.css");
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -85,7 +84,6 @@ input {
   padding-top: 15px;
   min-width: 550px;
   outline: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 input[value] {
   font-weight: 700;
@@ -447,18 +445,19 @@ header ul li:not(:last-child) {
 #tell-us .budget-scroll :nth-child(n) {
   width: 50%;
 }
-#tell-us .budget-scroll .range {
+#tell-us .budget-scroll .range-slider {
   min-width: 70%;
   margin: 0;
   padding: 0;
 }
 #tell-us .budget-scroll .price {
-  padding-left: 50px;
+  padding-left: 35px;
   min-width: 100%;
 }
 #tell-us .budget-scroll .price span,
 #tell-us .budget-scroll .price output {
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 #tell-us .btn-send {
   max-width: -webkit-max-content;
@@ -618,4 +617,56 @@ footer ul li {
 
 .hide {
   display: none;
+}
+
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].styled-slider {
+  -webkit-appearance: none;
+}
+
+input[type=range].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 20px + var(--ratio) * (100% - 20px));
+}
+
+input[type=range].styled-slider:focus {
+  outline: none;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background: #ffffff;
+  margin: -7.5px 0;
+}
+
+input[type=range].styled-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #ffffff;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb:hover {
+  background: #ffffff;
+}
+
+input[type=range].styled-slider:hover::-webkit-slider-runnable-track {
+  background: rgba(229, 229, 229, 0.8392156863);
+  border-color: #ffffff;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb:active {
+  background: #c0c0c0;
+}
+
+input[type=range].styled-slider:active::-webkit-slider-runnable-track {
+  background: #e40000;
+  border-color: #ffffff;
+}
+
+input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#ffffff, #ffffff) 0/var(--sx) 100% no-repeat, url("../img/bg/point.png") center;
 }/*# sourceMappingURL=main.css.map */
