@@ -399,6 +399,15 @@ header ul li:not(:last-child) {
     padding: 0;
   }
 }
+@media screen and (max-width: 400px) {
+  #what-we-do {
+    padding: 0 20px;
+  }
+  #what-we-do li:last-child {
+    border-bottom: none;
+  }
+}
+
 #accordion {
   height: 360px;
   width: 800px;
@@ -583,7 +592,8 @@ header ul li:not(:last-child) {
 }
 @media screen and (max-width: 375px) {
   #about-us .card .photo {
-    height: 300px;
+    height: 275px;
+    background-position: center 10% !important;
   }
 }
 
