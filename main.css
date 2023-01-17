@@ -1034,7 +1034,7 @@ input[type=range].styled-slider:active::-webkit-slider-runnable-track {
 }
 
 input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
-  background: linear-gradient(#ffffff, #ffffff) 0/var(--sx) 100% no-repeat, url("../img/bg/point.png") center;
+  background: linear-gradient(#ffffff, #ffffff) 0/var(--sx) 100% no-repeat, url("./img/bg/point.png") center;
 }
 
 @media screen and (max-width: 1440px) {

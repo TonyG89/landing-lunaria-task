@@ -2,7 +2,7 @@ import { titles } from '../../const.js';
 
 export default function headerSection(id) {
     const section = document.querySelector("#" + id)
-    const moreHtml = '<br><h5 class="hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil illo, pariatur saepe ipsam at mollitia?</h5><button class="more-about">More About Us<span><img src="../img/arrow.svg" alt="arrow" /></span></button>'
+    const moreHtml = '<br><h5 class="hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil illo, pariatur saepe ipsam at mollitia?</h5><button class="more-about">More About Us<span><img src="./img/arrow.svg" alt="arrow" /></span></button>'
 
     let html
     titles.forEach(i => {
@@ -24,10 +24,10 @@ export default function headerSection(id) {
     const btn = document.querySelector('.more-about')
     const hiddenBlock = document.querySelector(".hidden")
     btn.addEventListener("click", () => {
-            hiddenBlock.classList.add("visible")
-            btn.classList.add("hidden")
+        hiddenBlock.classList.add("visible")
+        btn.classList.add("hidden")
     })
-    document.querySelector("#"+id).style.width=document.querySelector("header").offsetWidth
+    document.querySelector("#" + id).style.width = document.querySelector("header").offsetWidth
 }
 
 

@@ -8,9 +8,9 @@ export const fixMenu = () => {
     <div class="container">
         <div class="menu" style="width: ${section.offsetWidth}px">
             <div class="logo-block" onclick="window.scrollTo(0, 0)">
-                <div class="logo"><img src="../img/lunaria.png"
+                <div class="logo"><img src="./img/lunaria.png"
                         alt="logo"></div>
-                <div><img src="../img/web-ui-dev.png" alt="web-ui-dev"></div>
+                <div><img src="./img/web-ui-dev.png" alt="web-ui-dev"></div>
             </div>
             <div class="top-header">Stand <span>with Ukraine</span></div>
             <nav>
