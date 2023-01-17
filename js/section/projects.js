@@ -7,7 +7,7 @@ export const blockProjects = () => {
         document.querySelector(".slide-zone").innerHTML += `
         <div class="slide">
             <div class="photo">
-                <img src="../img/projects/${i.photo}.png" alt="${i.title}">
+                <img src="./img/projects/${i.photo}.png" alt="${i.title}">
             </div>
             <h4 class="name">${i.title}</h4>
             <h5 class="desc">${i.desc === "" ? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque delectus at, deleniti mollitia impedit laborum reprehenderit enim fugiat optio." : i.desc}</h5>
